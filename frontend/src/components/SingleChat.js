@@ -15,7 +15,7 @@ import animationData from "../animations/typing.json";
 
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:4000"; 
+const ENDPOINT = "http://localhost:4000";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -268,11 +268,11 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                             )}
                             <Input
                                 variant="filled"
-                                bg="#CAEAD4"
+                                bg="#C7E9DD"
                                 placeholder="Enter a message......"
                                 value={newMessage}
                                 onChange={typingHandler}
-                                style={{ borderRadius: '15px' }} 
+                                style={{ borderRadius: '12px' }} 
                             />
                         </FormControl>
                     </Box>
