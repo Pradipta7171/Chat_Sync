@@ -38,11 +38,11 @@ Before running the application, make sure you have the following installed on yo
 
 
 
-<img src="Screenshot 2024-04-22 181724.png" alt="Screenshot 2" />
+<img src="Screenshots/Screenshot 2024-04-22 181724.png" alt="Screenshot 2" />
 
 
 
-<img src="Screenshot 2024-04-22 181749.png" alt="Screenshot 3" />
+<img src="Screenshots/Screenshot 2024-04-22 181749.png" alt="Screenshot 3" />
 
 
 This will concurrently start the server and client development servers.
