@@ -156,12 +156,12 @@ const SideDrawer = () => {
                         <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                             <Avatar size='sm' cursor='pointer' name={user.name} src={user.pic} />
                         </MenuButton>
-                        <MenuList>
+                        <MenuList bg='#DFEFF3'>
                             <ProfileModal user={user}>
-                                <MenuItem>My Profile</MenuItem>
+                                <MenuItem bg='#DFEFF3' _hover={{ bg: '#88C0CF' }}>My Profile</MenuItem>
                             </ProfileModal>
                             <MenuDivider />
-                            <MenuItem onClick={logoutHandler}>Logout</MenuItem>
+                            <MenuItem onClick={logoutHandler} bg='#DFEFF3' _hover={{ bg: '#88C0CF' }}>Logout</MenuItem>
                         </MenuList>
                     </Menu>
                 </div>
