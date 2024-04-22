@@ -34,7 +34,7 @@ Before running the application, make sure you have the following installed on yo
 5.  5. Start the development servers:
   
 
-<img src="Screenshot 2024-04-22 181607.png" alt="Screenshot 1" />
+<img src="Screenshots/Screenshot 2024-04-22 181607.png" alt="Screenshot 1" />
 
 
 
