@@ -16,8 +16,9 @@ const Login = () => {
 
     const handleClick = () => setShow(!show);
 
-    const submitHandler = async() => {
+    const submitHandler = async () => {
         setLoading(true);
+    
         if (!email || !password) {
             toast({
                 title: 'Please fill all the fields!',
@@ -30,17 +31,19 @@ const Login = () => {
             setLoading(false);
             return;
         }
-
+    
         try {
             const config = {
                 headers: {
                     "Content-type": "application/json",
                 },
             };
-
+    
             const response = await axios.post("/api/user/login", { email, password }, config);
             const { data } = response;
-
+    
+            localStorage.setItem("userInfo", JSON.stringify(data));
+    
             toast({
                 title: 'Login Successful!',
                 description: 'You have successfully logged in.Welcome to Chat-Sync Application 🎉🎉',
@@ -48,24 +51,23 @@ const Login = () => {
                 duration: 5000,
                 isClosable: true,
                 position: 'top',
-            })
-
-            localStorage.setItem("userInfo", JSON.stringify(data));
-            setLoading(false);
+            });
+    
             history.push("/chats");
-
         } catch (error) {
             toast({
                 title: 'An error occurred!',
-                description: 'Your Email or Password doesnt match with the user in the database. Please try again.',
+                description: 'Your Email or Password doesn\'t match with the user in the database. Please try again.',
                 status: 'error',
                 duration: 5000,
                 isClosable: true,
                 position: 'top',
             });
+        } finally {
             setLoading(false);
         }
     };
+    
 
 
     return (
